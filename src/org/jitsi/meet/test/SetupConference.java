@@ -47,12 +47,12 @@ public class SetupConference
 
         suite.addTest(new SetupConference("startOwner"));
         suite.addTest(new SetupConference("checkOwnerJoinRoom"));
-        suite.addTest(new SetupConference("startSecondParticipant"));
-        suite.addTest(new SetupConference("checkSecondParticipantJoinRoom"));
-        suite.addTest(new SetupConference("waitsOwnerToJoinConference"));
-        suite.addTest(new SetupConference("waitsSecondParticipantToJoinConference"));
-        suite.addTest(new SetupConference("waitForOwnerSendReceiveData"));
-        suite.addTest(new SetupConference("waitForSecondParticipantSendReceiveData"));
+        //suite.addTest(new SetupConference("startSecondParticipant"));
+        //suite.addTest(new SetupConference("checkSecondParticipantJoinRoom"));
+        //suite.addTest(new SetupConference("waitsOwnerToJoinConference"));
+        //suite.addTest(new SetupConference("waitsSecondParticipantToJoinConference"));
+        //suite.addTest(new SetupConference("waitForOwnerSendReceiveData"));
+        //suite.addTest(new SetupConference("waitForSecondParticipantSendReceiveData"));
 
         return suite;
     }

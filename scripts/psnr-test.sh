@@ -43,4 +43,4 @@ then
         PSNR=$(compare "$OUTPUT_FRAME" "$INPUT_FRAME" -metric PSNR /tmp/psnr_diff.png 2>&1 || true)
     fi
 fi
-echo $FRAME_NUMBER $PSNR
+echo "$OUTPUT_FRAME $FRAME_NUMBER $PSNR"

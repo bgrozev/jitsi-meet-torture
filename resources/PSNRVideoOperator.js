@@ -49,13 +49,13 @@ Camera.prototype.getId = function () {
  * Start capturing video frames.
  * @param {number} [fps=DEFAULT_FPS] custom fps
  */
-Camera.prototype.start = function (fps) {
+Camera.prototype.start = function (fps, width, height) {
     this.canvas = document.createElement('canvas');
     this.canvas.style.display = 'none';
     document.body.appendChild(this.canvas);
 
-    var width = this.video.videoWidth;
-    var height = this.video.videoHeight;
+    width = width || this.video.videoWidth;
+    height = height || this.video.videoHeight;
 
     this.canvas.width = width;
     this.canvas.height = height;
@@ -155,7 +155,9 @@ VideoOperator.prototype.recordAll = function (videoIds, fps) {
         }
 
         var recorder = new Camera(element);
-        recorder.start(fps);
+        recorder.start(fps,
+                       videoId == 'largeVideo' ? 1280 : 320,
+                       videoId == 'largeVideo' ? 720 :  180);
 
         this.cameras.push(recorder);
     }.bind(this));

@@ -98,6 +98,10 @@ public class TestsRunner
         }
 
         DEFAULT_TESTS_TO_RUN.add(EndConferenceTest.class.getSimpleName());
+
+        DEFAULT_TESTS_TO_RUN.clear();
+        DEFAULT_TESTS_TO_RUN.add(PSNRTest.class.getSimpleName());
+
     }
 
     /**
